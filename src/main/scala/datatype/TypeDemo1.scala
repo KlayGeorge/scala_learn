@@ -39,9 +39,11 @@ object TypeDemo1 {
     var end2 =a4.takeRight(1) //0
     var b:Char = a4.charAt(0)// H
     var c:Char = a4.charAt(4)//o
-    var r = "12.5"
-    var e = r.toInt
-    println(e)
+//    var r = "12.5"
+//    var e = r.toInt
+
+    var df : Double = 10.0/3
+    println(df)
 
 
 
