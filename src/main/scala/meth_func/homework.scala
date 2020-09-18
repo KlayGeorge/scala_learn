@@ -81,15 +81,43 @@ object homework {
       else s.take(1).charAt(0).toLong * product3(s.drop(1))
     }
 
-    //      9、编写函数计算,其中n是整数，使用如下的递归定义:
+    //    9、编写函数计算,其中n是整数，使用如下的递归定义:
     def mi(x: Double, n: Int): Double = {
       if (n == 0) 1
       else if (n > 0) x * mi(x, n - 1)
       else 1 / mi(x, -n)
     }
 
+    //10.
+    val m = new MethodExec
+    m.printRect()
+    m.width = 2.1
+    m.len = 3.4
+    println("面积=" + m.area())
 
   }
-
 }
 
+
+//    10、编写类(MethodExec)，编程一个方法，方法不需要参数，在方法中打印一个10*8 的矩形，在main方法中调用该方法。
+//    修改上一个程序，编写一个方法中，方法不需要参数，计算该矩形的面积，并将其作为方法返回值。在main方法中调用该方法，
+//    接收返回的面积值并打印(结果保留小数点2位)。
+class MethodExec {
+  //[方法不需要参数]即使用定义属性并赋值的方式
+  var len = 0.0
+  var width = 0.0
+
+  def printRect(): Unit = {
+    for (i <- 0 until 10) {
+      for (j <- 0 until 8) {
+        print("*")
+      }
+      println()
+    }
+  }
+
+  //计算面积的方法
+  def area(): Double = {
+    (this.len * this.width).formatted("%.2f").toDouble
+  }
+}
